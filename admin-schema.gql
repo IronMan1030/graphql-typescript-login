@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input LoginInput {
+  qrCode: String!
+}
+
+type LoginType {
+  id: ID!
+  qrCode: String!
+}
+
+type Mutation {
+  createLogin(input: LoginInput!): LoginType!
+}
+
+type Query {
+  login: [LoginType!]!
+  loginOne(qrKey: String!): LoginType!
+}
+
+type Subscription {
+  commentAdded: LoginType!
+}
